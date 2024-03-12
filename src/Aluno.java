@@ -3,7 +3,6 @@ public class Aluno implements Comparable<Aluno> {
     private int matricula;
     private double nota1;
     private double nota2;
-    // private double media;
 
     public Aluno(String nome, int matricula, double nota1, double nota2) {
         this.nome = nome;

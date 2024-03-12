@@ -1,7 +1,7 @@
 public class ExA {
     public static void main(String[] args) throws Exception {
-        Aluno aluno1 = new Aluno("João", 123, 8.5, 7.0);
-        Aluno aluno2 = new Aluno("Maria", 456, 9.0, 8.0);
+        Aluno aluno1 = new Aluno("Lucas", 123, 8.5, 7.5);
+        Aluno aluno2 = new Aluno("Júlia", 456, 9.0, 8.5);
 
         System.out.println("Informações do Aluno 1:");
         System.out.println(aluno1);

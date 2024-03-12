@@ -63,31 +63,6 @@ public class ExB {
         System.out.println("Não foi possível cadastrar o aluno. Vetor cheio.");
     }
 
-    // private static void cadastrarAluno() {
-    // for (int i = 0; i < MAX_ALUNOS; i++) {
-    // if (alunos[i] == null) {
-    // System.out.print("Digite o nome do aluno: ");
-    // String nome = scanner.nextLine();
-    // alunos[i] = new Aluno(nome, i, i, i);
-    // System.out.println("Aluno cadastrado com sucesso!");
-    // return;
-    // }
-    // }
-    // System.out.println("Não foi possível cadastrar o aluno. Vetor cheio.");
-    // }
-
-    // private static void imprimirAluno() {
-    // System.out.print("Digite o índice do aluno (de 0 a 4): ");
-    // int indice = scanner.nextInt();
-    // if (indice >= 0 && indice < MAX_ALUNOS && alunos[indice] != null) {
-    // Aluno aluno = alunos[indice];
-    // System.out.println("Nome: " + aluno.getNome());
-    // System.out.println("Média: " + aluno.getMedia());
-    // } else {
-    // System.out.println("Índice inválido ou aluno não cadastrado.");
-    // }
-    // }
-
     private static void imprimirAluno() {
         for (Aluno aluno : alunos) {
             if (aluno != null) {

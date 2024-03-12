@@ -50,6 +50,12 @@ public class ExB {
                 System.out.print("Digite o nome do aluno: ");
                 String nome = scanner.nextLine();
                 alunos[i] = new Aluno(nome, i, i, i);
+                System.out.print("Digite a nota1 do aluno: ");
+                double nota1 = scanner.nextDouble();
+                System.out.print("Digite a nota2 do aluno: ");
+                double nota2 = scanner.nextDouble();
+                alunos[i].setNota1(nota1);
+                alunos[i].setNota2(nota2);
                 System.out.println("Aluno cadastrado com sucesso!");
                 return;
             }
@@ -57,15 +63,38 @@ public class ExB {
         System.out.println("Não foi possível cadastrar o aluno. Vetor cheio.");
     }
 
+    // private static void cadastrarAluno() {
+    // for (int i = 0; i < MAX_ALUNOS; i++) {
+    // if (alunos[i] == null) {
+    // System.out.print("Digite o nome do aluno: ");
+    // String nome = scanner.nextLine();
+    // alunos[i] = new Aluno(nome, i, i, i);
+    // System.out.println("Aluno cadastrado com sucesso!");
+    // return;
+    // }
+    // }
+    // System.out.println("Não foi possível cadastrar o aluno. Vetor cheio.");
+    // }
+
+    // private static void imprimirAluno() {
+    // System.out.print("Digite o índice do aluno (de 0 a 4): ");
+    // int indice = scanner.nextInt();
+    // if (indice >= 0 && indice < MAX_ALUNOS && alunos[indice] != null) {
+    // Aluno aluno = alunos[indice];
+    // System.out.println("Nome: " + aluno.getNome());
+    // System.out.println("Média: " + aluno.getMedia());
+    // } else {
+    // System.out.println("Índice inválido ou aluno não cadastrado.");
+    // }
+    // }
+
     private static void imprimirAluno() {
-        System.out.print("Digite o índice do aluno (de 0 a 4): ");
-        int indice = scanner.nextInt();
-        if (indice >= 0 && indice < MAX_ALUNOS && alunos[indice] != null) {
-            Aluno aluno = alunos[indice];
-            System.out.println("Nome: " + aluno.getNome());
-            System.out.println("Média: " + aluno.getMedia());
-        } else {
-            System.out.println("Índice inválido ou aluno não cadastrado.");
+        for (Aluno aluno : alunos) {
+            if (aluno != null) {
+                System.out.println("Nome: " + aluno.getNome());
+                System.out.println("Média: " + aluno.calcularMedia());
+                System.out.println();
+            }
         }
     }
 
@@ -75,7 +104,7 @@ public class ExB {
                 System.out.println("Nome: " + aluno.getNome());
                 System.out.println("Nota1: " + aluno.getNota1());
                 System.out.println("Nota2: " + aluno.getNota2());
-                System.out.println("Média: " + aluno.getMedia());
+                System.out.println("Média: " + aluno.calcularMedia());
                 System.out.println();
             }
         }

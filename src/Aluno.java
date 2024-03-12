@@ -3,14 +3,14 @@ public class Aluno implements Comparable<Aluno> {
     private int matricula;
     private double nota1;
     private double nota2;
-    private double media;
+    // private double media;
 
     public Aluno(String nome, int matricula, double nota1, double nota2) {
         this.nome = nome;
         this.matricula = matricula;
         this.nota1 = nota1;
         this.nota2 = nota2;
-        this.media = (nota1 + nota2) / 2;
+
     }
 
     public String getNome() {
@@ -45,8 +45,8 @@ public class Aluno implements Comparable<Aluno> {
         this.nota2 = nota2;
     }
 
-    public double getMedia() {
-        return media;
+    public double calcularMedia() {
+        return (nota1 + nota2) / 2;
     }
 
     @Override
@@ -56,7 +56,7 @@ public class Aluno implements Comparable<Aluno> {
                 ", matricula=" + matricula +
                 ", nota1=" + nota1 +
                 ", nota2=" + nota2 +
-                ", media=" + media +
+                ", media=" + calcularMedia() +
                 '}';
     }
 
@@ -65,5 +65,4 @@ public class Aluno implements Comparable<Aluno> {
         return this.nome.compareTo(outroAluno.getNome());
     }
 
-    
 }
